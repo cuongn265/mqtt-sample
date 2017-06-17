@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Notes </title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<!-- Fonts -->
+	<!-- Lato -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Responsive Stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+	<!-- 
+	    Header start
+	    ==================== -->
+	<div class="navbar-default navbar-fixed-top" id="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img class="logo-1" src="images/logo-news.png" alt="LOGO">
+					<img class="logo-2" src="images/logo-news.png" alt="LOGO">
+				</a>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+
+	<section id="hero-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="block">
+						<h1 class="wow fadeInDown">Chuyên đề thực tế điện tử</h1>
+						<p class="wow fadeInDown" data-wow-delay="0.3s">Xây dựng ứng dụng IOT trên nền tảng module wipy</p>
+					</div>
+				</div>
+				<div class="col-md-6 wow zoomIn">
+					<div class="block">
+						<div class="wow fadeInDown" id="btn-group-1" data-wow-delay="0.3s">
+							<a class="btn btn-default btn-home" role="button" onclick="client.connect(options);">Connect</a>
+							<a class="btn btn-default btn-home" id="disconnect" role="button" onclick="client.disconnect(); $('#disconnect').css({ cursor: 'not-allowed' })"
+							 style="cursor: not-allowed;">Disconnect</a>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<p class="wow fadeInDown" data-wow-delay="0.3s" style="margin-left: 10px; margin-top: 30px;">Topic: NhietDo</p>
+								<div class="wow fadeInDown" id="btn-group-2" data-wow-delay="0.5s">
+									<a class="btn btn-default btn-home" id="subcribe"role="button" onclick="client.subscribe('NhietDo/#', {qos: 2}); toastr.info('Subscribed');" style="cursor: not-allowed;">Subcribe 'NhietDo'</a>
+								</div>
+								<div class="wow fadeInDown" id="btn-group-2" data-wow-delay="0.5s">
+									<a class="btn btn-default btn-home" id="messages" style="cursor: normal">Result: None</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<p class="wow fadeInDown" data-wow-delay="0.3s" style="margin-left: 10px; margin-top: 30px;">Topic: dkden</p>
+								<div class="wow fadeInDown" id="btn-group-2" data-wow-delay="0.5s">
+									<a class="btn btn-default btn-home" id="on"role="button" onclick="publish('on', 'dkden', 2);; toastr.info('On message is sent to devices');" style="cursor: not-allowed;">On</a>
+								</div>
+								<div class="wow fadeInDown" id="btn-group-2" data-wow-delay="0.5s">
+									<a class="btn btn-default btn-home" id="off"role="button" onclick="publish('off', 'dkden', 2);; toastr.info('Off message is sent to devices');" style="cursor: not-allowed;">Off</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .row close -->
+		</div>
+		<!-- .container close -->
+	</section>
+	<!-- header close -->
+
+	<section clas="wow fadeInUp">
+		<div class="map-wrapper">
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="block">
+						<p>Copyright &copy; <a href="http://www.Themefisher.com">Themefisher</a>| All right reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Js -->
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.lwtCountdown-1.0.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/jquery.nav.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/mqtt.js"></script>
+	<script src="js/script.js"></script>
+
+	<script>
+		window.onload = function () {
+			$(function () {
+				if (window.location.protocol === "https:")
+					window.location.protocol = "http";
+			});
+		}
+
+		toastr.options = {
+			"positionClass": "toast-top-center",
+		}
+	</script>
+
+</body>
+
+</html>
