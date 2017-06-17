@@ -11,7 +11,7 @@ client.onConnectionLost = function (responseObject) {
 //Gets called whenever you receive a message for your subscriptions
 client.onMessageArrived = function (message) {
   //Do something with the push message you received
-  $('#messages').html(message.destinationName + ': ' + message.payloadString + '</span><br/>');
+  $('#messages').html(message.destinationName + ': ' + message.payloadString + '&#8451');
 };
 
 //Connect Options
